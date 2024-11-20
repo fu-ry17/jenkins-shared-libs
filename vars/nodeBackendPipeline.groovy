@@ -1,4 +1,4 @@
-def call(Map config = [:]) {
+def call() {
     pipeline {
         agent any
         
@@ -76,7 +76,6 @@ def call(Map config = [:]) {
         }
     }
 }
-
 def getAppName() {
     def packageJson = readJSON file: 'package.json'
     return packageJson.name
